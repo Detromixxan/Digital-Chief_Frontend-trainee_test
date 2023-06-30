@@ -1,0 +1,15 @@
+@import "root.scss";
+@import "template.scss";
+@import "mixins.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+body {
+	margin: 10px;
+}
+
+p {
+	color: red;
+	border: 2px;
+}
