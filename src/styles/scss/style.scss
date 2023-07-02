@@ -1,1 +1,448 @@
+//шрифт 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
+//root- переменные
+//цвета
+$main-text-color: #000000;
+$confidential-text-color: #2306D6;
+$color-decorative-elements: #FFA501;
+$burger-text-color: #FFFFFF;
+$validation-text-color: red;
+//шрифты,текст, заголовки
+$main-header: 700 48px/60px 'Poppins', sans-serif;
+$secondary-header: 700 36px/60px 'Poppins', sans-serif;
+$yellow-circle-header: 700 16px/24px 'Poppins', sans-serif;
+$subtitles-header: 700 14px/21px 'Poppins', sans-serif;
+$social-text: 700 48px/60px 'Poppins', sans-serif;
+$main-text: 500 12px/18px 'Poppins', sans-serif;
+$burger-text: 700 24px/36px 'Poppins', sans-serif;
+$education-header-text: 700 20px/30px 'Poppins', sans-serif;
+
+// миксины
+//миксин желтых кружочков
+@mixin circle-yellow($width,$height,$br-radius,$bg-color){
+	width: $width;
+	height: $height;
+	border-radius: $br-radius;
+	background-color: $bg-color;
+};
+//миксин черных и желтых черточек
+@mixin string($width,$height,$bg-color){
+	width: $width;
+	height: $height;
+	background-color: $bg-color;
+};
+//миксин кнопок 
+@mixin btn($width,$height,$border,$bg-color){
+	width: $width;
+	height: $height;
+	border: $border;
+	background-color: $bg-color;
+};
+//миксин внешних отступов
+@mixin margin($mr-top,$mr-rig,$mr-bot,$mr-lef){
+	margin-top: $mr-top;
+	margin-right: $mr-rig;
+	margin-bottom: $mr-bot;
+	margin-left: $mr-lef;
+};
+//миксин внутренних отступов
+@mixin padding($pd-top,$pd-rig,$pd-bot,$pd-lef){
+	padding-top: $pd-top;
+	padding-right: $pd-rig;
+	padding-bottom: $pd-bot;
+	padding-left: $pd-lef;
+};
+// body
+
+//container-header
+.header__img {
+		background-image: url("../../../img/Background.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		position: relative;
+};
+// блок social
+//social-контейнер 
+.social {
+	width: 338px;
+	height: 24px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(-90deg);
+	position: absolute;
+	top: 376px;
+	left:25px;
+};
+//social-параграф 
+.social__paragraph {
+	@include margin(0px,15px,0px,0px)
+};
+//второстепенный заголовок 
+.secondary__header {
+	font: $secondary-header;
+	color: $main-text-color;
+};
+//social-полоска
+.social__element {
+	@include margin(0px,15px,0px,0px)
+};
+//полоса
+.string__element {
+	@include string(70px,2px,$main-text-color)
+};
+//social-позиционирование иконок
+.social__img-header {
+	@include margin(0px,15px,0px,0px);
+		&:last-child {
+			@include margin(0px,0px,0px,0px)
+		};
+};
+//header 
+//container -1140px
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	width: 1140px;
+};
+//header блок
+.header {
+	display:flex;
+	flex-direction: column;
+	position: relative;
+};
+//header-позиционирование+желтый круг
+.header__element {
+	@include margin(206px,885px,9px,10px);
+	z-index: 1;
+};
+
+.circle{
+	border-radius: 50%;
+	background-color: $color-decorative-elements;
+}
+
+.header__circle--size{
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: 200px;
+	left: -3px;
+	z-index: 0;
+}
+//третий заголовок 
+.third__header {
+	font: $yellow-circle-header;
+	color: $main-text-color;
+};
+//самый ббольшой заголовок
+.header__main-header {
+	@include margin(0px,608px,25px,0px);
+	font: $main-header;
+	color:$main-text-color;
+};
+//container - btn+link
+.header__btn-link{
+display: flex;
+flex-direction: row;
+align-items: center;
+@include margin(0px,0px,362px,0px);
+};
+//позиционирование кнопки в header
+.header__btn {
+	@include padding(12px,25px,12px,25px);
+	@include margin(0px,44px,0px,0px);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+};
+// шаблон кнопки 
+.main__btn--yellow {
+	@include btn( 135px, 45px, none,$color-decorative-elements);
+};
+// шаблон жирного текста
+.bold-text {
+	font: $subtitles-header;
+	color: $main-text-color;
+};
+// ссылка в header
+.link {
+	text-decoration: none;
+	color: $main-text-color;
+};
+//burger-btn-menu
+.burger__burger-position {
+	width: 36px;
+	height: 21px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: absolute;
+	top: 20px;
+	right:20px;
+};
+//burger-menu
+.burger__burger-position--active {
+
+};
+//burger-btn-elements-position
+.burger__element {
+	@include margin(0px,0px,6px,0px);
+	&:last-child{
+		margin-bottom: 0px;
+	};
+};
+//burger-btn-elements
+.string__element-burger {
+	@include string(30px,3px,$main-text-color);
+	&.xl{
+		@include string(36px,3px,$main-text-color);
+	};
+};
+//section experience
+.experience {
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	height: 559px;
+	@include margin(120px,0px,120px,0px);
+}
+//желтый круг опыт
+.experience__circle--size{
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: -5px;
+	left: 4px;
+	z-index: -10;
+}
+//отступы third-header
+.expirience__element {
+	@include margin(0px,0px,6px,0px);
+	position: relative;
+	z-index: 1;
+}
+//отступы secondary-header
+.experience__header-position {
+	@include margin(0px,0px,25px,0px);
+}
+//желтая строчка
+.string__element--yellow {
+	@include string(60px,3px,$color-decorative-elements);
+}
+//отступы желтой полосы
+.experience__string-position {
+	@include margin(0px,0px,60px,0px)
+}
+// контейнер опыт&образование
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+// контейнер опыт/образование
+.education {
+	display: flex;
+	flex-direction: column;
+	align-items:flex-start;
+	position: relative;
+}
+// круг рядом с образованием/опыт работы
+.education__circle--size{
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top:7px;
+	left: -51px;
+}
+// вертикальная длинная  полоса 
+.education__main-string{
+	@include string(343px,1px,$main-text-color);
+	position: absolute;
+	top:193px;
+	left: -215px;
+	transform: rotate(-90deg);
+}
+// контейнер 
+.education__item{
+	display: flex;
+	flex-direction: column;
+	@include margin(0px,0px,45px,0px);
+}
+// контейнер для круга,иконки и subtitle
+.education__element-circle{
+	display: flex;
+	flex-direction: row;
+	@include margin(0px,0px,12px,0px);
+}
+// размеры кргуа и  маленькая полоса, которая перед кругом
+.education__circle--size--big{
+	width: 36px;
+	height: 36px;
+	@include margin(0px,20px,0px,0px);
+	position: relative;
+	&::before{
+		@include string(42px,1px,$main-text-color);
+		transform: rotate(-180deg);
+		content: '';
+		position: absolute;
+		top: 20px;
+		left: -42px;
+	}
+}
+// иконка рядом с кругом
+.education__img-circle {
+	position: absolute;
+	top: 16px;
+	left: 15px;
+}
+
+.education__item--bottomn{
+	margin-bottom: 0px;
+}
+// отступ от текста lorem..
+.education__header {
+	@include margin(0px,0px,45px,0px)
+}
+//  заголовки большие
+.education__header-text {
+	font: $education-header-text;
+	color:$main-text-color;
+}
+
+.education__subtitle{
+	display: flex;
+	flex-direction: column;
+}
+// Lorem текст
+.education__main-text {
+	@include margin(0px,0px,0px,0px)
+}
+// Жирные маленькие заголовки 
+.education_subtitle-bold {
+	@include margin(0px,0px,0px,0px);
+}
+// шрифт главного маленького текста
+.main__text {
+	font: $main-text;
+	color:$main-text-color;
+}
+
+.education__text {
+	@include margin(0px,0px,0px,0px);
+}
+//footer-контейнер
+.footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 600px;
+	margin-bottom: 200px;
+}
+//footer-контейнер
+.footer__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 1140px;
+}
+//footer-контейнер-элементов
+.footer__flex{
+	display: flex;
+	flex-direction: row;
+}
+//footer-контейнер-основной информации
+.footer__info{
+	@include margin(0px,0px,0px,70px)
+}
+//footer-заголовок контакты
+.footer__element{
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 6px;
+	margin-left: 15px;
+	position: relative;
+	z-index: 1;
+}
+// footer круг
+.footer__circle--size {
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: -5px;
+	left: -13px;
+	z-index: -10;
+}
+//отступы для заголовка Свжитесь со мной
+.footer__footer-position {
+	@include margin(0px,0px,0px,0px)
+}
+//отступ желтой полосы
+.footer__string-position {
+	@include margin(4px,0px,20px,0px)
+}
+//отступы subtitle
+.footer__subtitle-bold {
+	@include margin(0px,0px,20px,0px)
+}
+//внешние отступы иконок
+.social__img-footer-1 {
+	@include margin(0px,25px,20px,0px)
+}
+//внешние отступы иконок
+.social__img-footer-2 {
+	@include margin(0px,20px,20px,0px)
+}
+//внешние отступы  иконок
+.social__img-footer-3 {
+	@include margin(0px,0px,20px,0px)
+}
+// контейнер
+.search__footer-info {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 21px;
+}
+//инпут 
+.user {
+	width: 280px;
+	height: 45px;
+	border: 1px solid $main-text-color;
+	margin-right: 19px; 
+	&:last-child{
+		margin-right: 0px; 
+	}
+}
+// большой инпут
+.usermessage {
+	width: 585px;
+	height: 190px;
+	border: 1px solid $main-text-color;
+	margin-bottom: 28px; 
+}
+// кнопка
+.header__btn {
+	padding-top: 12px;
+	padding-right: 25px;
+	padding-bottom: 12px;
+	padding-left: 25px;
+	margin-top: 0px;
+	margin-right: 44px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+//кнопка
+.main__btn--yellow {
+	width: 219px;
+	height: 45px;
+	border: none;
+	background-color: #FFA501;
+}
