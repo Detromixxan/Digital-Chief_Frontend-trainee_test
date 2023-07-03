@@ -1,0 +1,14 @@
+{
+  "name": "digital-chief-frontend-trainee-test",
+  "version": "1.0.0",
+  "description": "Тестовое задание выполненное для компании \"Digital-Chief\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
