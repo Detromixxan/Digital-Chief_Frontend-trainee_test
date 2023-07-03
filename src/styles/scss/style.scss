@@ -1,7 +1,8 @@
-//шрифт 
+//normalize сброс стилей
+@import url('../../../node_modules/normalize.css/normalize.css');
+//шрифты
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
 //root- переменные
 //цвета
 $main-text-color: #000000;
@@ -18,7 +19,6 @@ $social-text: 700 48px/60px 'Poppins', sans-serif;
 $main-text: 500 12px/18px 'Poppins', sans-serif;
 $burger-text: 700 24px/36px 'Poppins', sans-serif;
 $education-header-text: 700 20px/30px 'Poppins', sans-serif;
-
 // миксины
 //миксин желтых кружочков
 @mixin circle-yellow($width,$height,$br-radius,$bg-color){
@@ -54,11 +54,12 @@ $education-header-text: 700 20px/30px 'Poppins', sans-serif;
 	padding-bottom: $pd-bot;
 	padding-left: $pd-lef;
 };
-// body
-
+body{
+	overflow-x: hidden;
+}
 //container-header
 .header__img {
-		background-image: url("../../../img/Background.jpg");
+		background-image: url("../src/../img/Background.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		display: flex;
@@ -129,7 +130,7 @@ $education-header-text: 700 20px/30px 'Poppins', sans-serif;
 .circle{
 	border-radius: 50%;
 	background-color: $color-decorative-elements;
-}
+};
 
 .header__circle--size{
 	width: 36px;
@@ -138,13 +139,13 @@ $education-header-text: 700 20px/30px 'Poppins', sans-serif;
 	top: 200px;
 	left: -3px;
 	z-index: 0;
-}
+};
 //третий заголовок 
 .third__header {
 	font: $yellow-circle-header;
 	color: $main-text-color;
 };
-//самый ббольшой заголовок
+//самый большой заголовок
 .header__main-header {
 	@include margin(0px,608px,25px,0px);
 	font: $main-header;
@@ -162,6 +163,7 @@ align-items: center;
 	@include padding(12px,25px,12px,25px);
 	@include margin(0px,44px,0px,0px);
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
 };
 // шаблон кнопки 
 .main__btn--yellow {
@@ -206,6 +208,11 @@ align-items: center;
 		@include string(36px,3px,$main-text-color);
 	};
 };
+//burger-container
+.burger__menu {
+
+};
+
 //section experience
 .experience {
 	display: flex;
@@ -213,7 +220,7 @@ align-items: center;
 	align-items:center;
 	height: 559px;
 	@include margin(120px,0px,120px,0px);
-}
+};
 //желтый круг опыт
 .experience__circle--size{
 	width: 36px;
@@ -222,38 +229,38 @@ align-items: center;
 	top: -5px;
 	left: 4px;
 	z-index: -10;
-}
+};
 //отступы third-header
 .expirience__element {
 	@include margin(0px,0px,6px,0px);
 	position: relative;
 	z-index: 1;
-}
+};
 //отступы secondary-header
 .experience__header-position {
 	@include margin(0px,0px,25px,0px);
-}
+};
 //желтая строчка
 .string__element--yellow {
 	@include string(60px,3px,$color-decorative-elements);
-}
+};
 //отступы желтой полосы
 .experience__string-position {
 	@include margin(0px,0px,60px,0px)
-}
+};
 // контейнер опыт&образование
 .flex {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-}
+};
 // контейнер опыт/образование
 .education {
 	display: flex;
 	flex-direction: column;
 	align-items:flex-start;
 	position: relative;
-}
+};
 // круг рядом с образованием/опыт работы
 .education__circle--size{
 	width: 15px;
@@ -261,7 +268,7 @@ align-items: center;
 	position: absolute;
 	top:7px;
 	left: -51px;
-}
+};
 // вертикальная длинная  полоса 
 .education__main-string{
 	@include string(343px,1px,$main-text-color);
@@ -269,20 +276,20 @@ align-items: center;
 	top:193px;
 	left: -215px;
 	transform: rotate(-90deg);
-}
+};
 // контейнер 
 .education__item{
 	display: flex;
 	flex-direction: column;
 	@include margin(0px,0px,45px,0px);
-}
+};
 // контейнер для круга,иконки и subtitle
 .education__element-circle{
 	display: flex;
 	flex-direction: row;
 	@include margin(0px,0px,12px,0px);
-}
-// размеры кргуа и  маленькая полоса, которая перед кругом
+};
+// размеры кргуа и маленькая полоса, которая перед кругом
 .education__circle--size--big{
 	width: 36px;
 	height: 36px;
@@ -295,49 +302,49 @@ align-items: center;
 		position: absolute;
 		top: 20px;
 		left: -42px;
-	}
-}
+	};
+};
 // иконка рядом с кругом
 .education__img-circle {
 	position: absolute;
 	top: 16px;
 	left: 15px;
-}
+};
 
 .education__item--bottomn{
 	margin-bottom: 0px;
-}
+};
 // отступ от текста lorem..
 .education__header {
 	@include margin(0px,0px,45px,0px)
-}
+};
 //  заголовки большие
 .education__header-text {
 	font: $education-header-text;
 	color:$main-text-color;
-}
+};
 
 .education__subtitle{
 	display: flex;
 	flex-direction: column;
-}
+};
 // Lorem текст
 .education__main-text {
 	@include margin(0px,0px,0px,0px)
-}
+};
 // Жирные маленькие заголовки 
 .education_subtitle-bold {
 	@include margin(0px,0px,0px,0px);
-}
+};
 // шрифт главного маленького текста
 .main__text {
 	font: $main-text;
 	color:$main-text-color;
-}
+};
 
 .education__text {
 	@include margin(0px,0px,0px,0px);
-}
+};
 //footer-контейнер
 .footer{
 	display: flex;
@@ -345,23 +352,23 @@ align-items: center;
 	align-items: center;
 	height: 600px;
 	margin-bottom: 200px;
-}
+};
 //footer-контейнер
 .footer__container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	width: 1140px;
-}
+};
 //footer-контейнер-элементов
 .footer__flex{
 	display: flex;
 	flex-direction: row;
-}
+};
 //footer-контейнер-основной информации
 .footer__info{
 	@include margin(0px,0px,0px,70px)
-}
+};
 //footer-заголовок контакты
 .footer__element{
 	margin-top: 0px;
@@ -370,7 +377,7 @@ align-items: center;
 	margin-left: 15px;
 	position: relative;
 	z-index: 1;
-}
+};
 // footer круг
 .footer__circle--size {
 	width: 36px;
@@ -379,37 +386,41 @@ align-items: center;
 	top: -5px;
 	left: -13px;
 	z-index: -10;
-}
+};
 //отступы для заголовка Свжитесь со мной
 .footer__footer-position {
 	@include margin(0px,0px,0px,0px)
-}
+};
 //отступ желтой полосы
 .footer__string-position {
 	@include margin(4px,0px,20px,0px)
-}
+};
 //отступы subtitle
 .footer__subtitle-bold {
 	@include margin(0px,0px,20px,0px)
-}
+};
+//курсор для иконок
+.social__img{
+	cursor: pointer;
+};
 //внешние отступы иконок
 .social__img-footer-1 {
 	@include margin(0px,25px,20px,0px)
-}
+};
 //внешние отступы иконок
 .social__img-footer-2 {
 	@include margin(0px,20px,20px,0px)
-}
+};
 //внешние отступы  иконок
 .social__img-footer-3 {
 	@include margin(0px,0px,20px,0px)
-}
+};
 // контейнер
-.search__footer-info {
+.feedback__footer-info {
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 21px;
-}
+};
 //инпут 
 .user {
 	width: 280px;
@@ -418,15 +429,29 @@ align-items: center;
 	margin-right: 19px; 
 	&:last-child{
 		margin-right: 0px; 
-	}
-}
-// большой инпут
+	};
+};
+
+.input__box{
+	position: relative;
+	margin-right: 21px;
+};
+
+.input__box-label{
+	 position: absolute;
+  	top: -10px;
+  	left: 10px;
+  	background: #fff;
+  	padding: 0 5px;
+};
+
+// большойtextarea
 .usermessage {
 	width: 585px;
 	height: 190px;
 	border: 1px solid $main-text-color;
 	margin-bottom: 28px; 
-}
+};
 // кнопка
 .header__btn {
 	padding-top: 12px;
@@ -438,11 +463,11 @@ align-items: center;
 	margin-bottom: 0px;
 	margin-left: 0px;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
+};
 //кнопка
 .main__btn--yellow {
 	width: 219px;
 	height: 45px;
 	border: none;
 	background-color: #FFA501;
-}
+};

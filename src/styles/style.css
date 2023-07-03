@@ -1,7 +1,12 @@
+@import url("../../../node_modules/normalize.css/normalize.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+body {
+  overflow-x: hidden;
+}
+
 .header__img {
-  background-image: url("../../../img/Background.jpg");
+  background-image: url("../src/../img/Background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -132,6 +137,7 @@
   margin-bottom: 0px;
   margin-left: 0px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .main__btn--yellow {
@@ -420,6 +426,10 @@
   margin-left: 0px;
 }
 
+.social__img {
+  cursor: pointer;
+}
+
 .social__img-footer-1 {
   margin-top: 0px;
   margin-right: 25px;
@@ -441,7 +451,7 @@
   margin-left: 0px;
 }
 
-.search__footer-info {
+.feedback__footer-info {
   display: flex;
   flex-direction: row;
   margin-bottom: 21px;
@@ -455,6 +465,19 @@
 }
 .user:last-child {
   margin-right: 0px;
+}
+
+.input__box {
+  position: relative;
+  margin-right: 21px;
+}
+
+.input__box-label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  padding: 0 5px;
 }
 
 .usermessage {
