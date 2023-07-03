@@ -192,9 +192,6 @@ align-items: center;
 	cursor: pointer;
 };
 //burger-menu
-.burger__burger-position--active {
-
-};
 //burger-btn-elements-position
 .burger__element {
 	@include margin(0px,0px,6px,0px);
@@ -501,7 +498,7 @@ align-items: center;
 
 // большойtextarea
 .usermessage {
-	width: 585px;
+	width: 605px;
 	height: 190px;
 	border: 1px solid $main-text-color;
 	margin-bottom: 28px; 
@@ -525,3 +522,8 @@ align-items: center;
 	border: none;
 	background-color: #FFA501;
 };
+//валидационная форма
+.error-message {
+	color: red;
+	font: $subtitles-header;
+}

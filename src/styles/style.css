@@ -548,7 +548,7 @@ body {
 }
 
 .usermessage {
-  width: 585px;
+  width: 605px;
   height: 190px;
   border: 1px solid #000000;
   margin-bottom: 28px;
@@ -571,4 +571,9 @@ body {
   height: 45px;
   border: none;
   background-color: #FFA501;
+}
+
+.error-message {
+  color: red;
+  font: 700 14px/21px "Poppins", sans-serif;
 }

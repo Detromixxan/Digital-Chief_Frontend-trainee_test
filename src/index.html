@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../src/styles/style.css">
-	<link rel="stylesheet" href="../src/styles/normalize.css">
+	<link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
 	<title>Document</title>
 </head>
 <body>
@@ -132,7 +132,7 @@
 	</section>
 	<footer class="footer">
 		<div class="footer__container">
-			<div class="footer__flex">
+		  <div class="footer__flex">
 				<img src="../src/img/Alex.png" alt="" class="main__img">
 				<div class="footer__info">
 					<h3 class="footer__element third__header"><div class="circle footer__circle--size"></div>Контакты</h3>
@@ -145,21 +145,23 @@
 					<h3 class="footer__subtitle-bold bold-text">Или оставьте ваши данные и я сама вам напишу:</h3>
 					<div class="feedback__footer-info">
 						<div class="input__box">
-							<label class="input__box-label main__text">Ваше имя</label>
-							<input type="text" class="user">
-						</div>	
+								<label class="input__box-label main__text">Ваше имя</label>
+								<input type="text" class="user" id="name">
+							<div id="nameError" class="error-message"></div>
+						</div>  
 						<div class="input__box">
-							<label class="input__box-label main__text">Ваша почта</label>
-							<input type="text" class="user">
-						</div>	
-					</div>	
+								<label class="input__box-label main__text">Ваша почта</label>
+								<input type="text" class="user" id="email">
+								<div id="emailError" class="error-message"></div>
+						</div>  
+					</div>  
 					<div class="input__box">
 						<label class="input__box-label main__text">Ваше сообщение</label>
-						<textarea type="text" class="usermessage"></textarea>	
+						<textarea type="text" class="usermessage"></textarea>  
 					</div>
-					<button class=" header__btn main__btn--yellow bold-text">Отправить сообщение</button>
+					<button class=" header__btn main__btn--yellow bold-text" onclick="validateForm()">Отправить сообщение</button>
 				</div>
-			</div>
+		  </div>
 		</div>
 	</footer>
 	<script src="../src/scripts/script.js"></script>
