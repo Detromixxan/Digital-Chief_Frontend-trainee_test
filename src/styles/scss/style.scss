@@ -189,6 +189,7 @@ align-items: center;
 	position: absolute;
 	top: 20px;
 	right:20px;
+	cursor: pointer;
 };
 //burger-menu
 .burger__burger-position--active {
@@ -209,10 +210,63 @@ align-items: center;
 	};
 };
 //burger-container
-.burger__menu {
-
+.burger-menu {
+	width: 345px;
+	height: 795px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color:#FFA501;
+	display: none;
+	
 };
+//контейнер 
+.nav {
+	display: flex;
+	flex-direction: column;
+	@include margin(140px,94px,365px,40px);
+}
+//контейнер меню
+.menu {
+	font: $burger-text;
+	color:$burger-text-color;
+	list-style-type: none;
+}
+//крестик
+.close__two{
+	font-size: 38px;
+	position: absolute;
+	top: 24px ;
+	left: 291px;
+	right: 25px;
+	cursor: pointer;
+}
+//ссылки
+.menu__item {
+	text-decoration: none;
+	color:$burger-text-color;
+	position: relative;
+	&::before{
+		position: absolute;
+		top: 9px;
+		left: -35px;
+		border: 1px solid $main-text-color;
+		@include circle-yellow(15px,15px,50%,$color-decorative-elements);
+		content: '';
+	};
+}
+//элементы меню
+.li__menu-item {
+	@include margin(0px,0px,15px,0px);
+}
 
+.burger__social {
+	display: flex;
+	flex-direction:row; 
+	position: absolute;
+	bottom: 50px ;
+	left: 127px;
+}
 //section experience
 .experience {
 	display: flex;
