@@ -753,13 +753,13 @@ body {
     font-size: 38px;
     position: absolute;
     top: 24px;
-    left: 190px;
+    left: 235px;
     right: 25px;
     cursor: pointer;
   }
 
   .menu__item {
-    font: 700 18px/36px "Poppins", sans-serif;
+    font: 700 17px/36px "Poppins", sans-serif;
     text-decoration: none;
     color: #FFFFFF;
     position: relative;
@@ -767,7 +767,7 @@ body {
 
   .menu__item::before {
     position: absolute;
-    top: 9px;
+    top: 3px;
     left: -35px;
     border: 1px solid #000000;
     width: 15px;
@@ -788,7 +788,7 @@ body {
     display: flex;
     flex-direction: row;
     position: absolute;
-    left: 127px;
+    left: 100px;
   }
 
   .experience {
